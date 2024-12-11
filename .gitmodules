@@ -1,0 +1,4 @@
+[submodule "io_scene_halo/packages/Pytolith"]
+	path = io_scene_halo/packages/Pytolith
+	url = git@github.com:num0005/Pytolith.git
+	branch = master

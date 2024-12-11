@@ -50,6 +50,13 @@ from bpy.props import (
         FloatVectorProperty
         )
 
+# enable loading packages from "packages"
+import pathlib
+import os
+import sys
+root_directory = pathlib.Path(os.path.abspath(__file__)).parent
+sys.path.append(str(root_directory/"packages"))
+
 from . import global_ui
 from . import file_ass
 from . import file_jma
@@ -59,6 +66,14 @@ from . import file_qua
 from . import file_tag
 from . import file_wrl
 from . import misc
+
+# sample code
+
+import sys
+from Pytolith import Definitions
+
+defs = Definitions.Definitions()
+defs.load_from_xml(r"X:\Halo2TagLayout")
 
 modules = [
     global_ui,
